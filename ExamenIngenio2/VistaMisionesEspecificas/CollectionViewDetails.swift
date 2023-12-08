@@ -35,7 +35,7 @@ class CollectionViewDetails : UIView{
     layout.minimumInteritemSpacing = 0
     
     var collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
-    collection.backgroundColor = .yellow
+    collection.backgroundColor = .clear
     return collection
     
   }()

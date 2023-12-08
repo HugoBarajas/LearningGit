@@ -12,6 +12,9 @@ class CarruselCollectionViewCell: UICollectionViewCell {
   
   var imageNave : UIImageView = {
     var image = UIImageView()
+    image.clipsToBounds = true
+    image.layer.cornerRadius = 25
+    image.image = UIImage(named: "mision1")
     return image
     
   }()
@@ -22,7 +25,8 @@ class CarruselCollectionViewCell: UICollectionViewCell {
   override init(frame: CGRect) {
     super.init(frame: .zero)
     //self.backgroundView = UIImageView(image: UIImage(named: "fondo2"))
-    self.backgroundColor = UIColor(displayP3Red:CGFloat.random(in: 0...1) , green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1)
+    self.backgroundColor = .clear
+    
     
   
   }
@@ -34,6 +38,9 @@ class CarruselCollectionViewCell: UICollectionViewCell {
   
   func initUI(spaceXinfo : String){
     self.spaceXInfo = spaceXinfo
+    imageNave.sd_setImage(with:URL(string: spaceXinfo), placeholderImage: UIImage(named: "mision1") )
+    self.addSubview(imageNave)
+    imageNave.addAnchorsWithMargin(0)
   }
   
 }
