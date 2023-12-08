@@ -77,8 +77,7 @@ class EspecificMissionsViewController: UIViewController {
     //label.adjustsFontSizeToFitWidth = true
     label.layer.borderColor = UIColor.white.cgColor
     label.adjustsFontSizeToFitWidth = true
-    label.textAlignment = .center
-    label.font = UIFont(name: "Arial Bold", size: 19)
+    label.font = UIFont(name: "Arial Bold", size: 15)
     return label
     
   }()
@@ -87,10 +86,9 @@ class EspecificMissionsViewController: UIViewController {
     var label = UILabel()
     label.backgroundColor = .clear
     label.textColor = .white
-    label.textAlignment = .center
     label.layer.borderWidth = 2
     label.layer.borderColor = UIColor.white.cgColor
-    label.font = UIFont(name: "Arial Bold", size: 14)
+    label.font = UIFont(name: "Arial Bold", size: 15)
     return label
     
   }()
@@ -101,10 +99,9 @@ class EspecificMissionsViewController: UIViewController {
     var label = UILabel()
     label.backgroundColor = .clear
     label.textColor = .white
-    label.textAlignment = . center
     label.layer.borderWidth = 2
     label.layer.borderColor = UIColor.white.cgColor
-    label.font = UIFont(name: "Arial Bold", size: 16)
+    label.font = UIFont(name: "Arial Bold", size: 15)
     return label
   }()
   
@@ -112,22 +109,20 @@ class EspecificMissionsViewController: UIViewController {
     var label = UILabel()
     label.backgroundColor = .clear
     label.textColor = .white
-    label.textAlignment = . center
     label.layer.borderWidth = 2
     label.layer.borderColor = UIColor.white.cgColor
-    label.font = UIFont(name: "Arial Bold", size: 17)
+    label.font = UIFont(name: "Arial Bold", size: 15)
     return label
   }()
   
   
   var detallesLabel: UILabel = {
     var label = UILabel()
-    
     label.textColor = .white
-    label.textAlignment = . center
     label.layer.borderWidth = 2
+    label.numberOfLines = 0
     label.layer.borderColor = UIColor.white.cgColor
-    label.font = UIFont(name: "Arial Bold", size: 13)
+    label.font = UIFont(name: "Arial Bold", size: 15)
     return label
   }()
     
@@ -175,7 +170,7 @@ class EspecificMissionsViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+      //view.backgroundColor = .red
       view.addSubview(fondo)
       fondo.addAnchorsWithMargin(0)
      // setUpTimer()
@@ -206,21 +201,22 @@ class EspecificMissionsViewController: UIViewController {
     
     var fecha = formatearFecha(fechaString: (spaceXInfo?.launch_date_utc)!)
     
-    dateLabel.text = spaceXInfo?.mission_name
+    dateLabel.text = ("Date: \(fecha)")
     view.addSubview(dateLabel)
-    dateLabel.addAnchorsAndCenter(centerX: true, centerY: false, width: width - 20, height: 80, left: nil, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: detailsLabel)
+    dateLabel.addAnchorsAndCenter(centerX: true, centerY: false, width: width - 20, height: 40, left: nil, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: detailsLabel)
     
-    siteLabel.text = spaceXInfo?.launch_site?.site_name_long
+    var sitio = spaceXInfo?.launch_site?.site_name_long
+    siteLabel.text = ("Site: \(sitio!)")
     view.addSubview(siteLabel)
     siteLabel.addAnchorsAndCenter(centerX: true, centerY: false, width: width - 20, height: 40, left: nil, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: dateLabel )
     
-    rocketNameLabel.text = spaceXInfo?.launch_date_local
+    rocketNameLabel.text = ("Rocket: \((spaceXInfo?.rocket?.rocket_name)!)")
     view.addSubview(rocketNameLabel)
     rocketNameLabel.addAnchorsAndCenter(centerX: true, centerY: false, width: width - 20, height: 40, left: nil, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: siteLabel)
     
 
     
-    rocketTypeLabel.text = spaceXInfo?.rocket?.rocket_type
+    rocketTypeLabel.text = ("Rocket: \((spaceXInfo?.rocket?.rocket_type)!)")
     view.addSubview(rocketTypeLabel)
     rocketTypeLabel.addAnchorsAndCenter(centerX: true, centerY: false, width: width - 20, height: 40, left: nil, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: rocketNameLabel)
     
@@ -230,15 +226,15 @@ class EspecificMissionsViewController: UIViewController {
     
     
   
-    detallesLabel.text = spaceXInfo?.launch_year
+    detallesLabel.text = spaceXInfo?.details
     view.addSubview(detallesLabel)
-    detallesLabel.addAnchorsAndCenter(centerX: true, centerY: false, width: width - 20, height: 40, left: nil, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: collectionViewCarruselNuevo)
+    detallesLabel.addAnchorsAndCenter(centerX: true, centerY: false, width: width - 20, height: 100, left: nil, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: collectionViewCarruselNuevo)
     
       view.addSubview(playButton)
-      playButton.addAnchorsAndSize(width: 50, height: 25, left: 50, top: 20, right: nil, bottom: nil, withAnchor: .top, relativeToView: missionYearLabel)
+      playButton.addAnchorsAndSize(width: 50, height: 25, left: 50, top: 20, right: nil, bottom: nil, withAnchor: .top, relativeToView: detallesLabel)
       
       view.addSubview(playButtonLarge)
-      playButtonLarge.addAnchorsAndSize(width: 200, height: 25, left: 130, top: 20, right: nil, bottom: nil, withAnchor: .top, relativeToView: missionYearLabel)
+      playButtonLarge.addAnchorsAndSize(width: 200, height: 25, left: 130, top: 20, right: nil, bottom: nil, withAnchor: .top, relativeToView: detallesLabel)
       
       view.addSubview(launchInfoButton)
       launchInfoButton.addAnchorsAndSize(width: 50, height: 25, left: 50, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: playButton)
