@@ -40,9 +40,9 @@ class CollectionViewDetails : UIView{
   init(dataSource : [String]){
     self.dataSource = dataSource
     super.init(frame: .zero)
-    self.backgroundColor = .yellow
-    self.addSubview(fondo)
-    fondo.addAnchorsWithMargin(0)
+    self.backgroundColor = .clear
+    //self.addSubview(fondo)
+    //fondo.addAnchorsWithMargin(0)
     initUI()
   }
   
