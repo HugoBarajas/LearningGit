@@ -235,10 +235,12 @@ class EspecificMissionsViewController: UIViewController {
     detallesLabel.addAnchorsAndCenter(centerX: true, centerY: false, width: width - 20, height: 40, left: nil, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: collectionViewCarruselNuevo)
     
       view.addSubview(playButton)
-      playButton.addAnchorsAndSize(width: 50, height: 25, left: 50, top: 20, right: nil, bottom: nil, withAnchor: .top, relativeToView: missionYearLabel)
+      playButton.addAnchorsAndSize(width: 50, height: 25, left: 50, top: 20, right: nil, bottom: nil, withAnchor: .top, relativeToView: detallesLabel)
       
       view.addSubview(playButtonLarge)
-      playButtonLarge.addAnchorsAndSize(width: 200, height: 25, left: 130, top: 20, right: nil, bottom: nil, withAnchor: .top, relativeToView: missionYearLabel)
+      playButtonLarge.addAnchorsAndSize(width: 200, height: 25, left: 130, top: 20, right: nil, bottom: nil, withAnchor: .top, relativeToView: detallesLabel)
+      
+      playButtonLarge.addTarget(self, action: #selector(goToYouTube), for: .touchUpInside)
       
       view.addSubview(launchInfoButton)
       launchInfoButton.addAnchorsAndSize(width: 50, height: 25, left: 50, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: playButton)
@@ -254,6 +256,12 @@ class EspecificMissionsViewController: UIViewController {
     //let viewController = ViewControllerIG()
     //navigationController?.pushViewController(viewController, animated: true)
   }
+    
+    @objc func goToYouTube(){
+        
+        self.navigationController?.pushViewController(YouTubeViewController(),
+                                                              animated: true)
+    }
   
   func formatearFecha(fechaString : String) -> String {
 

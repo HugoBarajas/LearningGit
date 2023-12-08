@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B17597E2B22C6BD00A87EB2 /* YouTubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B17597D2B22C6BD00A87EB2 /* YouTubeViewController.swift */; };
 		F85217EB2B1838380014C1EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85217EA2B1838380014C1EA /* AppDelegate.swift */; };
 		F85217ED2B1838380014C1EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85217EC2B1838380014C1EA /* SceneDelegate.swift */; };
 		F85217EF2B1838380014C1EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85217EE2B1838380014C1EA /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		357039E529EF8ACA4DF37D4A /* Pods_ExamenIngenio2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExamenIngenio2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B17597D2B22C6BD00A87EB2 /* YouTubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeViewController.swift; sourceTree = "<group>"; };
 		5F600A20B1D80B2F59FFB524 /* Pods-ExamenIngenio2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamenIngenio2.debug.xcconfig"; path = "Target Support Files/Pods-ExamenIngenio2/Pods-ExamenIngenio2.debug.xcconfig"; sourceTree = "<group>"; };
 		E4A8131A3303A11447D4F331 /* Pods-ExamenIngenio2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamenIngenio2.release.xcconfig"; path = "Target Support Files/Pods-ExamenIngenio2/Pods-ExamenIngenio2.release.xcconfig"; sourceTree = "<group>"; };
 		F85217E72B1838380014C1EA /* ExamenIngenio2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExamenIngenio2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +62,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B17597C2B22C68A00A87EB2 /* YouTube&LaunchInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				5B17597D2B22C6BD00A87EB2 /* YouTubeViewController.swift */,
+			);
+			path = "YouTube&LaunchInfoView";
+			sourceTree = "<group>";
+		};
 		B976AFB8AB5FD10E7758F19A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +108,7 @@
 		F85217E92B1838380014C1EA /* ExamenIngenio2 */ = {
 			isa = PBXGroup;
 			children = (
+				5B17597C2B22C68A00A87EB2 /* YouTube&LaunchInfoView */,
 				F852180F2B1931090014C1EA /* VistaMisionesEspecificas */,
 				F85218032B1838E00014C1EA /* VistaSpaceX */,
 				F85217FF2B1838670014C1EA /* Utils */,
@@ -268,6 +279,7 @@
 				F85217ED2B1838380014C1EA /* SceneDelegate.swift in Sources */,
 				F85218052B18398E0014C1EA /* CollectionSpaceXViewController.swift in Sources */,
 				F858FBE42B2020000020E25D /* CarruselCollectionViewCell.swift in Sources */,
+				5B17597E2B22C6BD00A87EB2 /* YouTubeViewController.swift in Sources */,
 				F85218022B1838900014C1EA /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
