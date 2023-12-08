@@ -130,6 +130,47 @@ class EspecificMissionsViewController: UIViewController {
     label.font = UIFont(name: "Arial Bold", size: 13)
     return label
   }()
+    
+    var playButton : UIButton = {
+        var play = UIButton()
+        play.backgroundColor = .systemPink
+        play.setImage(UIImage(named: "tocar"), for: .normal)
+        play.contentMode = .scaleToFill
+        play.layer.cornerRadius = 25
+        play.clipsToBounds = true
+        play.tintColor = .white
+        return play
+    }()
+    
+    var playButtonLarge : UIButton = {
+        var playLarge = UIButton()
+        playLarge.backgroundColor = .systemPink
+        playLarge.setTitle("YT Video", for: .normal)
+        playLarge.layer.cornerRadius = 10
+        playLarge.clipsToBounds = true
+        return playLarge
+    }()
+    
+    var launchInfoButton : UIButton = {
+        var launchInfo = UIButton()
+        launchInfo.backgroundColor = .blue
+        launchInfo.setImage(UIImage(named: "informacion"), for: .normal)
+        launchInfo.layer.cornerRadius = 25
+        launchInfo.clipsToBounds = true
+        launchInfo.tintColor = .white
+        return launchInfo
+    }()
+    
+    var launchInfoButtonLarge : UIButton = {
+        var launchInfoButton = UIButton()
+        launchInfoButton.backgroundColor = .blue
+        launchInfoButton.setTitle("Launch Info", for: .normal)
+        launchInfoButton.layer.cornerRadius = 10
+        launchInfoButton.clipsToBounds = true
+        return launchInfoButton
+    }()
+    
+    
   
   
     override func viewDidLoad() {
@@ -193,7 +234,17 @@ class EspecificMissionsViewController: UIViewController {
     view.addSubview(detallesLabel)
     detallesLabel.addAnchorsAndCenter(centerX: true, centerY: false, width: width - 20, height: 40, left: nil, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: collectionViewCarruselNuevo)
     
-    
+      view.addSubview(playButton)
+      playButton.addAnchorsAndSize(width: 50, height: 25, left: 50, top: 20, right: nil, bottom: nil, withAnchor: .top, relativeToView: missionYearLabel)
+      
+      view.addSubview(playButtonLarge)
+      playButtonLarge.addAnchorsAndSize(width: 200, height: 25, left: 130, top: 20, right: nil, bottom: nil, withAnchor: .top, relativeToView: missionYearLabel)
+      
+      view.addSubview(launchInfoButton)
+      launchInfoButton.addAnchorsAndSize(width: 50, height: 25, left: 50, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: playButton)
+      
+      view.addSubview(launchInfoButtonLarge)
+      launchInfoButtonLarge.addAnchorsAndSize(width: 200, height: 25, left: 130, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: playButtonLarge)
     
     
   }
