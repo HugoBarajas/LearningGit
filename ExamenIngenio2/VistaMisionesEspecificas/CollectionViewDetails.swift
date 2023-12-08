@@ -25,9 +25,6 @@ class CollectionViewDetails : UIView{
   
   var dataSource = [String]()
     
-
-  
-  
   var collectionViewCarrusel :UICollectionView = {
     var layout = UICollectionViewFlowLayout()
     layout.scrollDirection = .horizontal
@@ -64,10 +61,7 @@ class CollectionViewDetails : UIView{
     collectionViewCarrusel.addAnchorsWithMargin(0)
     
   }
-  
-
-  
-  
+    
   }
   
 extension CollectionViewDetails: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
