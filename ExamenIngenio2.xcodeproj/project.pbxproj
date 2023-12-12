@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B17597E2B22C6BD00A87EB2 /* YouTubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B17597D2B22C6BD00A87EB2 /* YouTubeViewController.swift */; };
+		5B1759802B27F36800A87EB2 /* WebPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B17597F2B27F36800A87EB2 /* WebPageViewController.swift */; };
 		F85217EB2B1838380014C1EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85217EA2B1838380014C1EA /* AppDelegate.swift */; };
 		F85217ED2B1838380014C1EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85217EC2B1838380014C1EA /* SceneDelegate.swift */; };
 		F85217EF2B1838380014C1EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85217EE2B1838380014C1EA /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		357039E529EF8ACA4DF37D4A /* Pods_ExamenIngenio2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExamenIngenio2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B17597D2B22C6BD00A87EB2 /* YouTubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeViewController.swift; sourceTree = "<group>"; };
+		5B17597F2B27F36800A87EB2 /* WebPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageViewController.swift; sourceTree = "<group>"; };
 		5F600A20B1D80B2F59FFB524 /* Pods-ExamenIngenio2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamenIngenio2.debug.xcconfig"; path = "Target Support Files/Pods-ExamenIngenio2/Pods-ExamenIngenio2.debug.xcconfig"; sourceTree = "<group>"; };
 		E4A8131A3303A11447D4F331 /* Pods-ExamenIngenio2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamenIngenio2.release.xcconfig"; path = "Target Support Files/Pods-ExamenIngenio2/Pods-ExamenIngenio2.release.xcconfig"; sourceTree = "<group>"; };
 		F85217E72B1838380014C1EA /* ExamenIngenio2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExamenIngenio2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				5B17597D2B22C6BD00A87EB2 /* YouTubeViewController.swift */,
+				5B17597F2B27F36800A87EB2 /* WebPageViewController.swift */,
 			);
 			path = "YouTube&LaunchInfoView";
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				F85218112B19316F0014C1EA /* EspecificMissionsViewController.swift in Sources */,
 				F858FBE22B201F760020E25D /* CollectionViewDetails.swift in Sources */,
 				F85218092B183A070014C1EA /* CollectionViewSpaceX.swift in Sources */,
+				5B1759802B27F36800A87EB2 /* WebPageViewController.swift in Sources */,
 				F852180B2B183A1A0014C1EA /* CollectionViewCellSpaceX.swift in Sources */,
 				F852180D2B183A2B0014C1EA /* ModelSpaceX.swift in Sources */,
 				F85217ED2B1838380014C1EA /* SceneDelegate.swift in Sources */,

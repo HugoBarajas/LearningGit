@@ -65,9 +65,6 @@ class CollectionSpaceXViewController: UIViewController {
     collectionViewSpace.addAnchorsAndSize(width: nil, height: nil, left: 5, top: 10, right: 5, bottom: nil, withAnchor: .top, relativeToView: labelTitulo)
     
   }
-  
-  
-
     
 }
 
@@ -90,12 +87,13 @@ extension CollectionSpaceXViewController : CollectionViewSpaceXDelegate{
     let info = dataSource[indexPath.item]
     
     
-    
+//  Navigation sirve para navegar en distintos controllers
     let misionEspecifica = EspecificMissionsViewController()
     
     misionEspecifica.spaceXInfo = info
-    misionEspecifica.modalPresentationStyle = .fullScreen
-    self.present(misionEspecifica, animated: true)
+//    misionEspecifica.modalPresentationStyle = .fullScreen
+//    self.present(misionEspecifica, animated: true)
+      navigationController?.pushViewController(misionEspecifica, animated: true)
   }
   
  

@@ -8,9 +8,11 @@
 import UIKit
 import YouTubePlayer
 
+
 class EspecificMissionsViewController: UIViewController {
   
   var spaceXInfo : ModelSpaceX?
+  var dataSource = [ModelSpaceX]()
  /*
   mission_name
   flight_number
@@ -23,9 +25,6 @@ class EspecificMissionsViewController: UIViewController {
   var missionVideo : YouTubePlayerView = {
     var video = YouTubePlayerView()
     return video
-    
-    
-    
   }()
   
   var collectionViewCarruselNuevo : CollectionViewDetails?
@@ -130,8 +129,8 @@ class EspecificMissionsViewController: UIViewController {
         var play = UIButton()
         play.backgroundColor = .systemPink
         play.setImage(UIImage(named: "tocar"), for: .normal)
-        play.contentMode = .scaleToFill
-        play.layer.cornerRadius = 25
+        play.contentMode = .scaleAspectFit
+        play.layer.cornerRadius = 15
         play.clipsToBounds = true
         play.tintColor = .white
         return play
@@ -141,7 +140,7 @@ class EspecificMissionsViewController: UIViewController {
         var playLarge = UIButton()
         playLarge.backgroundColor = .systemPink
         playLarge.setTitle("YT Video", for: .normal)
-        playLarge.layer.cornerRadius = 10
+        playLarge.layer.cornerRadius = 15
         playLarge.clipsToBounds = true
         return playLarge
     }()
@@ -150,7 +149,7 @@ class EspecificMissionsViewController: UIViewController {
         var launchInfo = UIButton()
         launchInfo.backgroundColor = .blue
         launchInfo.setImage(UIImage(named: "informacion"), for: .normal)
-        launchInfo.layer.cornerRadius = 25
+        launchInfo.layer.cornerRadius = 15
         launchInfo.clipsToBounds = true
         launchInfo.tintColor = .white
         return launchInfo
@@ -160,14 +159,11 @@ class EspecificMissionsViewController: UIViewController {
         var launchInfoButton = UIButton()
         launchInfoButton.backgroundColor = .blue
         launchInfoButton.setTitle("Launch Info", for: .normal)
-        launchInfoButton.layer.cornerRadius = 10
+        launchInfoButton.layer.cornerRadius = 15
         launchInfoButton.clipsToBounds = true
         return launchInfoButton
     }()
     
-    
-  
-  
     override func viewDidLoad() {
         super.viewDidLoad()
       //view.backgroundColor = .red
@@ -184,18 +180,6 @@ class EspecificMissionsViewController: UIViewController {
     view.addSubview(botonRegresar)
     botonRegresar.addAnchorsAndSize(width: 30, height: 30, left: 20, top: 70, right: nil, bottom: nil)
     
-    
-   /* view.addSubview(misionViewVideo)
-    misionViewVideo.addAnchorsAndCenter(centerX: true, centerY: false, width: 250, height: 200, left: nil, top: 70, right: nil, bottom: nil)
-    
-    
-    missionVideo.loadVideoID((spaceXInfo?.links?.youtube_id)!)
-    missionVideo.frame = CGRect(x: 0, y: 0, width: 250, height: 200)
-    misionViewVideo.addSubview(missionVideo)
-    */
-    
-   
-    //missionLabel.text = spaceXInfo?.mission_name
     view.addSubview(detailsLabel)
     detailsLabel.addAnchorsAndCenter(centerX: true, centerY: false, width: width - 20, height: 40, left: nil, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: botonRegresar)
     
@@ -213,7 +197,6 @@ class EspecificMissionsViewController: UIViewController {
     rocketNameLabel.text = ("Rocket: \((spaceXInfo?.rocket?.rocket_name)!)")
     view.addSubview(rocketNameLabel)
     rocketNameLabel.addAnchorsAndCenter(centerX: true, centerY: false, width: width - 20, height: 40, left: nil, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: siteLabel)
-    
 
     
     rocketTypeLabel.text = ("Rocket: \((spaceXInfo?.rocket?.rocket_type)!)")
@@ -223,29 +206,32 @@ class EspecificMissionsViewController: UIViewController {
     collectionViewCarruselNuevo = CollectionViewDetails(dataSource: (spaceXInfo?.links?.flickr_images)!)
     view.addSubview(collectionViewCarruselNuevo!)
     collectionViewCarruselNuevo!.addAnchorsAndCenter(centerX: true, centerY: false, width: width - 20, height: 200, left: nil, top: 20, right: nil, bottom: nil, withAnchor: .top, relativeToView: rocketTypeLabel)
-    
-    
   
     detallesLabel.text = spaceXInfo?.details
     view.addSubview(detallesLabel)
     detallesLabel.addAnchorsAndCenter(centerX: true, centerY: false, width: width - 20, height: 100, left: nil, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: collectionViewCarruselNuevo)
     
       view.addSubview(playButton)
-      playButton.addAnchorsAndSize(width: 50, height: 25, left: 50, top: 20, right: nil, bottom: nil, withAnchor: .top, relativeToView: detallesLabel)
+      playButton.addAnchorsAndSize(width: 30, height: 30, left: 50, top: 20, right: nil, bottom: nil, withAnchor: .top, relativeToView: detallesLabel)
+      
+      playButton.addTarget(self, action: #selector(goToYouTube), for: .touchUpInside)
       
       view.addSubview(playButtonLarge)
-      playButtonLarge.addAnchorsAndSize(width: 200, height: 25, left: 130, top: 20, right: nil, bottom: nil, withAnchor: .top, relativeToView: detallesLabel)
+      playButtonLarge.addAnchorsAndSize(width: 200, height: 30, left: 130, top: 20, right: nil, bottom: nil, withAnchor: .top, relativeToView: detallesLabel)
 
       
       playButtonLarge.addTarget(self, action: #selector(goToYouTube), for: .touchUpInside)
 
       
       view.addSubview(launchInfoButton)
-      launchInfoButton.addAnchorsAndSize(width: 50, height: 25, left: 50, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: playButton)
+      launchInfoButton.addAnchorsAndSize(width: 30, height: 30, left: 50, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: playButton)
+      
+      launchInfoButton.addTarget(self, action: #selector(goToWebPage), for: .touchUpInside)
       
       view.addSubview(launchInfoButtonLarge)
-      launchInfoButtonLarge.addAnchorsAndSize(width: 200, height: 25, left: 130, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: playButtonLarge)
+      launchInfoButtonLarge.addAnchorsAndSize(width: 200, height: 30, left: 130, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: playButtonLarge)
     
+      launchInfoButtonLarge.addTarget(self, action: #selector(goToWebPage), for: .touchUpInside)
     
   }
   
@@ -257,8 +243,24 @@ class EspecificMissionsViewController: UIViewController {
     
     @objc func goToYouTube(){
         
-        self.navigationController?.pushViewController(YouTubeViewController(),
-                                                              animated: true)
+//        self.navigationController?.pushViewController(YouTubeViewController(),
+//                                                              animated: true)
+        let info = spaceXInfo
+        let viewController = YouTubeViewController()
+        viewController.spaceXInfo =  info
+        navigationController?.pushViewController(viewController, animated: true)
+//        viewController.spaceXInfo =  info
+    }
+    
+    @objc func goToWebPage(){
+        
+//        self.navigationController?.pushViewController(YouTubeViewController(),
+//                                                              animated: true)
+        let info = spaceXInfo
+        let viewController = WebPageViewController()
+        viewController.spaceXInfo =  info
+        navigationController?.pushViewController(viewController, animated: true)
+//        viewController.spaceXInfo =  info
     }
   
   func formatearFecha(fechaString : String) -> String {
@@ -284,22 +286,4 @@ class EspecificMissionsViewController: UIViewController {
     
   }
 
-
 }
-/*
-extension CollectionSpaceXViewController : CollectionViewDetailsDelegate{
-  func selectedNave(indexPath: IndexPath) {
-    
-    let info = dataSource[indexPath.item]
-    
-    
-    
-    let misionEspecifica = EspecificMissionsViewController()
-    
-    misionEspecifica.spaceXInfo = info
-    misionEspecifica.modalPresentationStyle = .fullScreen
-    self.present(misionEspecifica, animated: true)
-  }
-  
-}
- */

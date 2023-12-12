@@ -14,7 +14,7 @@ class YouTubeViewController: UIViewController {
 
     var misionViewVideo: UIView = {
       var view = UIView()
-      view.backgroundColor = .brown
+      view.backgroundColor = .black
       view.layer.borderWidth = 4
       view.layer.borderColor = UIColor.white.cgColor
       view.clipsToBounds = true
@@ -35,11 +35,12 @@ class YouTubeViewController: UIViewController {
     func initUI(){
         
         view.addSubview(misionViewVideo)
-         misionViewVideo.addAnchorsAndCenter(centerX: true, centerY: false, width: 250, height: 200, left: nil, top: 70, right: nil, bottom: nil)
+         misionViewVideo.addAnchorsAndCenter(centerX: true, centerY: true, width: width, height: 400, left: nil, top: nil, right: nil, bottom: nil)
 
+    
         missionVideo.loadVideoID((spaceXInfo?.links?.youtube_id)!)
-        missionVideo.frame = CGRect(x: 0, y: 0, width: 250, height: 200)
-        missionVideo.addSubview(missionVideo)
+        missionVideo.frame = CGRect(x: 0, y: 0, width: width, height: 400)
+        misionViewVideo.addSubview(missionVideo)
     }
 
 }
