@@ -61,8 +61,8 @@ class EspecificMissionsViewController: UIViewController {
     label.textColor = .white
     //label.textAlignment = .center
     label.text = "Details"
-    label.layer.borderWidth = 2
-    label.layer.borderColor = UIColor.white.cgColor
+    //label.layer.borderWidth = 2
+    //label.layer.borderColor = UIColor.white.cgColor
     label.font = UIFont(name: "Arial Bold", size: 30)
     return label
     
@@ -72,10 +72,10 @@ class EspecificMissionsViewController: UIViewController {
     var label = UILabel()
     label.backgroundColor = .clear
     label.textColor = .white
-    label.layer.borderWidth = 2
+  //  label.layer.borderWidth = 2
     label.numberOfLines = 0
     //label.adjustsFontSizeToFitWidth = true
-    label.layer.borderColor = UIColor.white.cgColor
+   // label.layer.borderColor = UIColor.white.cgColor
     label.adjustsFontSizeToFitWidth = true
     label.font = UIFont(name: "Arial Bold", size: 15)
     return label
@@ -86,8 +86,8 @@ class EspecificMissionsViewController: UIViewController {
     var label = UILabel()
     label.backgroundColor = .clear
     label.textColor = .white
-    label.layer.borderWidth = 2
-    label.layer.borderColor = UIColor.white.cgColor
+    //label.layer.borderWidth = 2
+   // label.layer.borderColor = UIColor.white.cgColor
     label.font = UIFont(name: "Arial Bold", size: 15)
     return label
     
@@ -99,8 +99,8 @@ class EspecificMissionsViewController: UIViewController {
     var label = UILabel()
     label.backgroundColor = .clear
     label.textColor = .white
-    label.layer.borderWidth = 2
-    label.layer.borderColor = UIColor.white.cgColor
+    //label.layer.borderWidth = 2
+   // label.layer.borderColor = UIColor.white.cgColor
     label.font = UIFont(name: "Arial Bold", size: 15)
     return label
   }()
@@ -109,8 +109,8 @@ class EspecificMissionsViewController: UIViewController {
     var label = UILabel()
     label.backgroundColor = .clear
     label.textColor = .white
-    label.layer.borderWidth = 2
-    label.layer.borderColor = UIColor.white.cgColor
+    //label.layer.borderWidth = 2
+   // label.layer.borderColor = UIColor.white.cgColor
     label.font = UIFont(name: "Arial Bold", size: 15)
     return label
   }()
@@ -119,9 +119,10 @@ class EspecificMissionsViewController: UIViewController {
   var detallesLabel: UILabel = {
     var label = UILabel()
     label.textColor = .white
-    label.layer.borderWidth = 2
+   // label.layer.borderWidth = 2
     label.numberOfLines = 0
-    label.layer.borderColor = UIColor.white.cgColor
+    label.textAlignment = .center
+   // label.layer.borderColor = UIColor.white.cgColor
     label.font = UIFont(name: "Arial Bold", size: 15)
     return label
   }()
@@ -224,9 +225,16 @@ class EspecificMissionsViewController: UIViewController {
     view.addSubview(collectionViewCarruselNuevo!)
     collectionViewCarruselNuevo!.addAnchorsAndCenter(centerX: true, centerY: false, width: width - 20, height: 200, left: nil, top: 20, right: nil, bottom: nil, withAnchor: .top, relativeToView: rocketTypeLabel)
     
-    
+   
   
+    //detallesLabel.text = spaceXInfo?.details
+    if spaceXInfo?.details == nil {
+    detallesLabel.text = "Mission Passed! Respect +"
+    detallesLabel.textColor = .yellow
+    }else{
     detallesLabel.text = spaceXInfo?.details
+    }
+    
     view.addSubview(detallesLabel)
     detallesLabel.addAnchorsAndCenter(centerX: true, centerY: false, width: width - 20, height: 100, left: nil, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: collectionViewCarruselNuevo)
     
