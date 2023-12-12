@@ -130,6 +130,7 @@ class EspecificMissionsViewController: UIViewController {
         var play = UIButton()
         play.backgroundColor = .systemPink
         play.setImage(UIImage(named: "tocar"), for: .normal)
+        play.imageEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         play.contentMode = .scaleAspectFit
         play.layer.cornerRadius = 15
         play.clipsToBounds = true
@@ -177,12 +178,8 @@ class EspecificMissionsViewController: UIViewController {
   
   func initUI(){
     
-    botonRegresar.addTarget(self, action: #selector(goToInicio), for: .touchUpInside)
-    view.addSubview(botonRegresar)
-    botonRegresar.addAnchorsAndSize(width: 30, height: 30, left: 20, top: 70, right: nil, bottom: nil)
-    
     view.addSubview(detailsLabel)
-    detailsLabel.addAnchorsAndCenter(centerX: true, centerY: false, width: width - 20, height: 40, left: nil, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: botonRegresar)
+    detailsLabel.addAnchorsAndCenter(centerX: true, centerY: false, width: width - 20, height: 40, left: nil, top: 90, right: nil, bottom: nil)
     
     var fecha = formatearFecha(fechaString: (spaceXInfo?.launch_date_utc)!)
     
@@ -241,12 +238,6 @@ class EspecificMissionsViewController: UIViewController {
     
       launchInfoButtonLarge.addTarget(self, action: #selector(goToWebPage), for: .touchUpInside)
     
-  }
-  
-  @objc func goToInicio(){
-    dismiss(animated: true, completion: nil)
-    //let viewController = ViewControllerIG()
-    //navigationController?.pushViewController(viewController, animated: true)
   }
     
     @objc func goToYouTube(){
