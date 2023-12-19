@@ -28,11 +28,18 @@ class CarruselCoordinator : Coordinator{
     navigationController.setViewControllers([view], animated: true)
   }
   
-  func goToYouTube(detalleInfo : ModelSpaceX){
+  func goToYouTube(){
     let coordinatorYouTube = YouTubeCoordinator(navigationController: navigationController)
-    coordinatorYouTube.detalleInfo = detalleInfo
+    coordinatorYouTube.detalleInfo = self.detalleInfo
     childCoordinator.append(coordinatorYouTube)
     coordinatorYouTube.startCoordinator()
+  }
+  
+  func goToWebPage(){
+    let coordinatorWebPage = WebViewCoordinator(navigationController: navigationController)
+    coordinatorWebPage.detalleInfo = self.detalleInfo
+    childCoordinator.append(coordinatorWebPage)
+    coordinatorWebPage.startCoordinator()
   }
   
   

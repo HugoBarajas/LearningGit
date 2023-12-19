@@ -9,7 +9,7 @@ import UIKit
 import WebKit
 
 class WebPageViewController: UIViewController, WKNavigationDelegate {
-    
+  var viewModel : WebPageViewModel!
     var spaceXInfo: ModelSpaceX?
     
     lazy var webView: WKWebView = {
@@ -20,15 +20,21 @@ class WebPageViewController: UIViewController, WKNavigationDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        initUI()
+      initInfo()
+      initUI()
     }
     
+  
+  func initInfo(){
+    spaceXInfo = viewModel.detalleInfo
+  }
     func initUI() {
         guard let urlString = spaceXInfo?.links?.wikipedia,
               let url = URL(string: urlString) else {
             print("URL inválida")
             return
         }
+      
         
         let request = URLRequest(url: url)
         webView.load(request)
@@ -36,4 +42,6 @@ class WebPageViewController: UIViewController, WKNavigationDelegate {
         view.addSubview(webView)
         webView.addAnchorsWithMargin(0)
     }
+  
+  
 }
