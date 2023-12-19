@@ -82,13 +82,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5B17597C2B22C68A00A87EB2 /* YouTube&LaunchInfoView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "YouTube&LaunchInfoView";
-			sourceTree = "<group>";
-		};
 		B976AFB8AB5FD10E7758F19A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,7 +143,6 @@
 				F8295D642B312B8800A8E9E7 /* AppCoordinator.swift */,
 				F8295D6B2B313B3F00A8E9E7 /* LaunchInfoMVP */,
 				F8295D6A2B313B1900A8E9E7 /* YoutubeMVP */,
-				5B17597C2B22C68A00A87EB2 /* YouTube&LaunchInfoView */,
 				F852180F2B1931090014C1EA /* VistaMisionesEspecificas */,
 				F85218032B1838E00014C1EA /* VistaSpaceX */,
 				F85217FF2B1838670014C1EA /* Utils */,

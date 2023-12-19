@@ -18,33 +18,21 @@ class CarruselCollectionViewCell: UICollectionViewCell {
     return image
     
   }()
-  
-  
-  
-  
+
   override init(frame: CGRect) {
     super.init(frame: .zero)
-    //self.backgroundView = UIImageView(image: UIImage(named: "fondo2"))
     self.backgroundColor = .clear
-    
-    
-  
   }
   
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-  
-  
   func initUI(spaceXinfo : String){
     self.spaceXInfo = spaceXinfo
     imageNave.sd_setImage(with:URL(string: spaceXinfo), placeholderImage: UIImage(named: "mision1") )
    
     self.addSubview(imageNave)
     imageNave.addAnchorsAndSize(width: nil, height: nil, left: 0, top: 0, right: 0, bottom: 30)
-    
-    
-    
   }
   
 }
