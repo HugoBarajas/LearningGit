@@ -13,6 +13,7 @@ class EspecificMissionsViewController: UIViewController {
   
   var spaceXInfo : ModelSpaceX?
   var dataSource = [ModelSpaceX]()
+  var viewModel : CarruselViewModel!
  /*
   mission_name
   flight_number
@@ -81,13 +82,14 @@ class EspecificMissionsViewController: UIViewController {
     
   }()
   
-  var siteLabel : UILabel = {
-    var label = UILabel()
+  var siteLabel : UITextView = {
+    var label = UITextView()
     label.backgroundColor = .clear
     label.textColor = .white
     //label.layer.borderWidth = 2
    // label.layer.borderColor = UIColor.white.cgColor
     label.font = UIFont(name: "Arial Bold", size: 15)
+    //label.adjustsFontSizeToFitWidth = true
     return label
     
   }()
@@ -123,6 +125,7 @@ class EspecificMissionsViewController: UIViewController {
     label.textAlignment = .center
    // label.layer.borderColor = UIColor.white.cgColor
     label.font = UIFont(name: "Arial Bold", size: 15)
+    label.adjustsFontSizeToFitWidth = true
     return label
   }()
     
@@ -172,8 +175,12 @@ class EspecificMissionsViewController: UIViewController {
       view.addSubview(fondo)
       fondo.addAnchorsWithMargin(0)
      // setUpTimer()
+      initInfo()
       initUI()
     }
+  func initInfo(){
+    spaceXInfo = viewModel.detalleInfo
+  }
    
   
   func initUI(){
@@ -201,9 +208,14 @@ class EspecificMissionsViewController: UIViewController {
     view.addSubview(rocketTypeLabel)
     rocketTypeLabel.addAnchorsAndCenter(centerX: true, centerY: false, width: width - 20, height: 40, left: nil, top: 5, right: nil, bottom: nil, withAnchor: .top, relativeToView: rocketNameLabel)
     
+    
+    
+    
     collectionViewCarruselNuevo = CollectionViewDetails(dataSource: (spaceXInfo?.links?.flickr_images)!)
     view.addSubview(collectionViewCarruselNuevo!)
-    collectionViewCarruselNuevo!.addAnchorsAndCenter(centerX: true, centerY: false, width: width - 20, height: 200, left: nil, top: 20, right: nil, bottom: nil, withAnchor: .top, relativeToView: rocketTypeLabel)
+    let collectionheight = (spaceXInfo?.links?.flickr_images!.isEmpty)! ? 0.0 : 200.0
+    collectionViewCarruselNuevo!.addAnchorsAndCenter(centerX: true, centerY: false, width: width - 20, height: collectionheight, left: nil, top: 20, right: nil, bottom: nil, withAnchor: .top, relativeToView: rocketTypeLabel)
+   
 
     //detallesLabel.text = spaceXInfo?.details
     if spaceXInfo?.details == nil {

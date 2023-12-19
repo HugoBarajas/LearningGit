@@ -11,6 +11,7 @@ import YouTubePlayer
 class YouTubeViewController: UIViewController {
     
     var spaceXInfo : ModelSpaceX?
+  var viewModel : YouTubeViewModel!
 
     var misionViewVideo: UIView = {
       var view = UIView()
@@ -29,9 +30,13 @@ class YouTubeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initUI()
+      initInfo()
+      initUI()
     }
-    
+  func initInfo(){
+    spaceXInfo = viewModel.detalleInfo
+  }
+  
     func initUI(){
         
         view.addSubview(misionViewVideo)

@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		5B17597E2B22C6BD00A87EB2 /* YouTubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B17597D2B22C6BD00A87EB2 /* YouTubeViewController.swift */; };
 		5B1759802B27F36800A87EB2 /* WebPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B17597F2B27F36800A87EB2 /* WebPageViewController.swift */; };
+		F8295D612B31295100A8E9E7 /* CollectionSpaceXView Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8295D602B31295100A8E9E7 /* CollectionSpaceXView Model.swift */; };
+		F8295D632B31297200A8E9E7 /* CollectionSpaceXCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8295D622B31297200A8E9E7 /* CollectionSpaceXCoordinator.swift */; };
+		F8295D652B312B8800A8E9E7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8295D642B312B8800A8E9E7 /* AppCoordinator.swift */; };
+		F8295D672B31315E00A8E9E7 /* CarruselCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8295D662B31315D00A8E9E7 /* CarruselCoordinator.swift */; };
+		F8295D692B31317900A8E9E7 /* CarruselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8295D682B31317900A8E9E7 /* CarruselViewModel.swift */; };
+		F8295D6D2B313B6B00A8E9E7 /* YouTubeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8295D6C2B313B6B00A8E9E7 /* YouTubeViewModel.swift */; };
+		F8295D6F2B313B8B00A8E9E7 /* YouTubeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8295D6E2B313B8B00A8E9E7 /* YouTubeCoordinator.swift */; };
+		F8295D712B313BAB00A8E9E7 /* WebPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8295D702B313BAB00A8E9E7 /* WebPageViewModel.swift */; };
+		F8295D732B313BBC00A8E9E7 /* WebViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8295D722B313BBC00A8E9E7 /* WebViewCoordinator.swift */; };
 		F85217EB2B1838380014C1EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85217EA2B1838380014C1EA /* AppDelegate.swift */; };
 		F85217ED2B1838380014C1EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85217EC2B1838380014C1EA /* SceneDelegate.swift */; };
 		F85217EF2B1838380014C1EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85217EE2B1838380014C1EA /* ViewController.swift */; };
@@ -33,6 +42,15 @@
 		5B17597F2B27F36800A87EB2 /* WebPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageViewController.swift; sourceTree = "<group>"; };
 		5F600A20B1D80B2F59FFB524 /* Pods-ExamenIngenio2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamenIngenio2.debug.xcconfig"; path = "Target Support Files/Pods-ExamenIngenio2/Pods-ExamenIngenio2.debug.xcconfig"; sourceTree = "<group>"; };
 		E4A8131A3303A11447D4F331 /* Pods-ExamenIngenio2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExamenIngenio2.release.xcconfig"; path = "Target Support Files/Pods-ExamenIngenio2/Pods-ExamenIngenio2.release.xcconfig"; sourceTree = "<group>"; };
+		F8295D602B31295100A8E9E7 /* CollectionSpaceXView Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionSpaceXView Model.swift"; sourceTree = "<group>"; };
+		F8295D622B31297200A8E9E7 /* CollectionSpaceXCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionSpaceXCoordinator.swift; sourceTree = "<group>"; };
+		F8295D642B312B8800A8E9E7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F8295D662B31315D00A8E9E7 /* CarruselCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarruselCoordinator.swift; sourceTree = "<group>"; };
+		F8295D682B31317900A8E9E7 /* CarruselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarruselViewModel.swift; sourceTree = "<group>"; };
+		F8295D6C2B313B6B00A8E9E7 /* YouTubeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeViewModel.swift; sourceTree = "<group>"; };
+		F8295D6E2B313B8B00A8E9E7 /* YouTubeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeCoordinator.swift; sourceTree = "<group>"; };
+		F8295D702B313BAB00A8E9E7 /* WebPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPageViewModel.swift; sourceTree = "<group>"; };
+		F8295D722B313BBC00A8E9E7 /* WebViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewCoordinator.swift; sourceTree = "<group>"; };
 		F85217E72B1838380014C1EA /* ExamenIngenio2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExamenIngenio2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F85217EA2B1838380014C1EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F85217EC2B1838380014C1EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,8 +85,6 @@
 		5B17597C2B22C68A00A87EB2 /* YouTube&LaunchInfoView */ = {
 			isa = PBXGroup;
 			children = (
-				5B17597D2B22C6BD00A87EB2 /* YouTubeViewController.swift */,
-				5B17597F2B27F36800A87EB2 /* WebPageViewController.swift */,
 			);
 			path = "YouTube&LaunchInfoView";
 			sourceTree = "<group>";
@@ -88,6 +104,26 @@
 				E4A8131A3303A11447D4F331 /* Pods-ExamenIngenio2.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F8295D6A2B313B1900A8E9E7 /* YoutubeMVP */ = {
+			isa = PBXGroup;
+			children = (
+				5B17597D2B22C6BD00A87EB2 /* YouTubeViewController.swift */,
+				F8295D6C2B313B6B00A8E9E7 /* YouTubeViewModel.swift */,
+				F8295D6E2B313B8B00A8E9E7 /* YouTubeCoordinator.swift */,
+			);
+			path = YoutubeMVP;
+			sourceTree = "<group>";
+		};
+		F8295D6B2B313B3F00A8E9E7 /* LaunchInfoMVP */ = {
+			isa = PBXGroup;
+			children = (
+				5B17597F2B27F36800A87EB2 /* WebPageViewController.swift */,
+				F8295D702B313BAB00A8E9E7 /* WebPageViewModel.swift */,
+				F8295D722B313BBC00A8E9E7 /* WebViewCoordinator.swift */,
+			);
+			path = LaunchInfoMVP;
 			sourceTree = "<group>";
 		};
 		F85217DE2B1838380014C1EA = {
@@ -111,6 +147,9 @@
 		F85217E92B1838380014C1EA /* ExamenIngenio2 */ = {
 			isa = PBXGroup;
 			children = (
+				F8295D642B312B8800A8E9E7 /* AppCoordinator.swift */,
+				F8295D6B2B313B3F00A8E9E7 /* LaunchInfoMVP */,
+				F8295D6A2B313B1900A8E9E7 /* YoutubeMVP */,
 				5B17597C2B22C68A00A87EB2 /* YouTube&LaunchInfoView */,
 				F852180F2B1931090014C1EA /* VistaMisionesEspecificas */,
 				F85218032B1838E00014C1EA /* VistaSpaceX */,
@@ -141,6 +180,8 @@
 				F85218082B183A070014C1EA /* CollectionViewSpaceX.swift */,
 				F852180A2B183A1A0014C1EA /* CollectionViewCellSpaceX.swift */,
 				F85218062B1839E00014C1EA /* NetworkManager.swift */,
+				F8295D602B31295100A8E9E7 /* CollectionSpaceXView Model.swift */,
+				F8295D622B31297200A8E9E7 /* CollectionSpaceXCoordinator.swift */,
 				F852180C2B183A2B0014C1EA /* ModelSpaceX.swift */,
 			);
 			path = VistaSpaceX;
@@ -152,6 +193,8 @@
 				F85218102B19316F0014C1EA /* EspecificMissionsViewController.swift */,
 				F858FBE12B201F760020E25D /* CollectionViewDetails.swift */,
 				F858FBE32B2020000020E25D /* CarruselCollectionViewCell.swift */,
+				F8295D682B31317900A8E9E7 /* CarruselViewModel.swift */,
+				F8295D662B31315D00A8E9E7 /* CarruselCoordinator.swift */,
 			);
 			path = VistaMisionesEspecificas;
 			sourceTree = "<group>";
@@ -271,15 +314,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8295D632B31297200A8E9E7 /* CollectionSpaceXCoordinator.swift in Sources */,
 				F85218072B1839E00014C1EA /* NetworkManager.swift in Sources */,
+				F8295D652B312B8800A8E9E7 /* AppCoordinator.swift in Sources */,
 				F85217EF2B1838380014C1EA /* ViewController.swift in Sources */,
+				F8295D732B313BBC00A8E9E7 /* WebViewCoordinator.swift in Sources */,
 				F85217EB2B1838380014C1EA /* AppDelegate.swift in Sources */,
+				F8295D692B31317900A8E9E7 /* CarruselViewModel.swift in Sources */,
+				F8295D712B313BAB00A8E9E7 /* WebPageViewModel.swift in Sources */,
+				F8295D6D2B313B6B00A8E9E7 /* YouTubeViewModel.swift in Sources */,
 				F85218112B19316F0014C1EA /* EspecificMissionsViewController.swift in Sources */,
+				F8295D612B31295100A8E9E7 /* CollectionSpaceXView Model.swift in Sources */,
+				F8295D672B31315E00A8E9E7 /* CarruselCoordinator.swift in Sources */,
 				F858FBE22B201F760020E25D /* CollectionViewDetails.swift in Sources */,
 				F85218092B183A070014C1EA /* CollectionViewSpaceX.swift in Sources */,
 				5B1759802B27F36800A87EB2 /* WebPageViewController.swift in Sources */,
 				F852180B2B183A1A0014C1EA /* CollectionViewCellSpaceX.swift in Sources */,
 				F852180D2B183A2B0014C1EA /* ModelSpaceX.swift in Sources */,
+				F8295D6F2B313B8B00A8E9E7 /* YouTubeCoordinator.swift in Sources */,
 				F85217ED2B1838380014C1EA /* SceneDelegate.swift in Sources */,
 				F85218052B18398E0014C1EA /* CollectionSpaceXViewController.swift in Sources */,
 				F858FBE42B2020000020E25D /* CarruselCollectionViewCell.swift in Sources */,

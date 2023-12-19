@@ -11,17 +11,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 var window: UIWindow?
+  var appCoordinator : AppCoordinator?
+  
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
     
     //window donde se guardan todos los view controller
     window = UIWindow(frame: UIScreen.main.bounds)
-    let navigationController = UINavigationController(rootViewController: CollectionSpaceXViewController())//cual va a ser el controller principal, o el inicial
-    window?.rootViewController = navigationController// el navigatorController va a ser la raiz de nuestra ventana.
-    window?.makeKeyAndVisible()//que se haga visible la ventana
-
-    
+    appCoordinator = AppCoordinator(window: window!)
+    appCoordinator?.startCoordinator()
     return true
   }
 

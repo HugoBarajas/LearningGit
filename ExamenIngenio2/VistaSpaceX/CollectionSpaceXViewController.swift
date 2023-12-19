@@ -9,6 +9,7 @@ import UIKit
 
 class CollectionSpaceXViewController: UIViewController {
 
+  var viewModel : CollectionViewSpaceXViewModel!
   var dataSource = [ModelSpaceX]()
   
   //creo Variables para el Collection.
@@ -50,7 +51,7 @@ class CollectionSpaceXViewController: UIViewController {
     }
     
   func getData(){
-    let networkManager = NetworkManager()
+    let networkManager = CollectionViewSpaceXViewModel()
     networkManager.delegate = self
     networkManager.getSpaceXList()
   }
@@ -68,7 +69,7 @@ class CollectionSpaceXViewController: UIViewController {
     
 }
 
-extension CollectionSpaceXViewController : NetworkManagerDelegate{
+extension CollectionSpaceXViewController : CollectionViewSpaceXViewModelDelegate{
   func responseSuccess(response: [ModelSpaceX]) {
     print("responseSucess\(response)")
     dataSource.append(contentsOf: response)
@@ -86,14 +87,7 @@ extension CollectionSpaceXViewController : CollectionViewSpaceXDelegate{
     
     let info = dataSource[indexPath.item]
     
-    
-//  Navigation sirve para navegar en distintos controllers
-    let misionEspecifica = EspecificMissionsViewController()
-    
-    misionEspecifica.spaceXInfo = info
-//    misionEspecifica.modalPresentationStyle = .fullScreen
-//    self.present(misionEspecifica, animated: true)
-      navigationController?.pushViewController(misionEspecifica, animated: true)
+    viewModel.goToCarrusel(infoVM: info)
   }
   
  

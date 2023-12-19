@@ -43,7 +43,9 @@ class CollectionViewCellSpaceX : UICollectionViewCell{
     var labelMision1 = UILabel()
     labelMision1.backgroundColor = .clear
     labelMision1.clipsToBounds = true
+    labelMision1.numberOfLines = 0
     //labelMision1.textAlignment = .center
+  // labelMision1.backgroundColor = .white
     //labelMision1.adjustsFontSizeToFitWidth = true
     labelMision1.textColor = .white
     labelMision1.font = UIFont(name: "Arial Bold", size: 15)
@@ -54,7 +56,8 @@ class CollectionViewCellSpaceX : UICollectionViewCell{
     var label = UILabel()
     label.backgroundColor = .clear
     label.clipsToBounds = true
-    label.textAlignment = .center
+    label.numberOfLines = 0
+   // label.textAlignment = .center
     //label.adjustsFontSizeToFitWidth = true
     label.textColor = .white
     label.font = .systemFont(ofSize: 15)
@@ -106,11 +109,11 @@ class CollectionViewCellSpaceX : UICollectionViewCell{
     
     labelMision.text = spaceXinfo.mission_name
     self.addSubview(labelMision)
-    labelMision.addAnchorsAndCenter(centerX: false, centerY: false, width: 110, height: 15, left: 10, top: 20, right: nil, bottom: nil, withAnchor: .left, relativeToView: viewDegradado)
+    labelMision.addAnchorsAndCenter(centerX: false, centerY: false, width: 200, height: 45, left: 10, top: 10, right: nil, bottom: nil, withAnchor: .left, relativeToView: viewDegradado)
     
     labelLanzamiento.text = spaceXinfo.launch_site?.site_name
     self.addSubview(labelLanzamiento)
-    labelLanzamiento.addAnchorsAndCenter(centerX: false, centerY: false, width: 100, height: 15, left: 10, top: 65, right: nil, bottom: nil, withAnchor: .left, relativeToView: viewDegradado)
+    labelLanzamiento.addAnchorsAndCenter(centerX: false, centerY: false, width: 200, height: 15 , left: 10, top: 70, right: nil, bottom: nil, withAnchor: .left, relativeToView: viewDegradado)
     
     var fechaNueva = formatearFecha(fechaString: (spaceXInfo?.launch_date_utc)!)
     
