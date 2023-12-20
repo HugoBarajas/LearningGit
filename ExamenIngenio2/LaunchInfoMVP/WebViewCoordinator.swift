@@ -26,7 +26,7 @@ class  WebViewCoordinator : Coordinator{
     viewModel.detalleInfo = self.detalleInfo
     viewModel.coordinator = self
     view.viewModel = viewModel
-    navigationController.setViewControllers([view], animated: true)
+      navigationController.pushViewController(view, animated: true)
   }
   
   
