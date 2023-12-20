@@ -258,24 +258,12 @@ class EspecificMissionsViewController: UIViewController {
     
     @objc func goToYouTube(){
         
-//        self.navigationController?.pushViewController(YouTubeViewController(),
-//                                                              animated: true)
-        let info = spaceXInfo
-        let viewController = YouTubeViewController()
-        viewController.spaceXInfo =  info
-        navigationController?.pushViewController(viewController, animated: true)
-//        viewController.spaceXInfo =  info
+      viewModel.goToYouTube()
     }
     
     @objc func goToWebPage(){
         
-//        self.navigationController?.pushViewController(YouTubeViewController(),
-//                                                              animated: true)
-        let info = spaceXInfo
-        let viewController = WebPageViewController()
-        viewController.spaceXInfo =  info
-        navigationController?.pushViewController(viewController, animated: true)
-//        viewController.spaceXInfo =  info
+      viewModel.goToWebPage()
     }
     
     @objc func goBack(){
