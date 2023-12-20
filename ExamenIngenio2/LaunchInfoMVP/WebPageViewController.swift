@@ -11,6 +11,7 @@ import WebKit
 class WebPageViewController: UIViewController, WKNavigationDelegate {
   var viewModel : WebPageViewModel!
     var spaceXInfo: ModelSpaceX?
+   
     
     lazy var webView: WKWebView = {
         let webView = WKWebView()

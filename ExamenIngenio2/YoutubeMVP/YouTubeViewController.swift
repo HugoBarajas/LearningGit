@@ -26,6 +26,7 @@ class YouTubeViewController: UIViewController {
     var video = YouTubePlayerView()
     return video
     
+
   }()
   
   override func viewDidLoad() {
@@ -36,6 +37,7 @@ class YouTubeViewController: UIViewController {
   func initInfo(){
     spaceXInfo = viewModel.detalleInfo
   }
+
   
   func initUI(){
     

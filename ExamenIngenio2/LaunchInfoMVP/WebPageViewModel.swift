@@ -7,7 +7,9 @@
 
 import Foundation
 
+
 class WebPageViewModel{
+
   
   var coordinator : WebViewCoordinator!
   var detalleInfo : ModelSpaceX?
