@@ -12,4 +12,10 @@ class CarruselViewModel{
   var coordinator : CarruselCoordinator!
   var detalleInfo : ModelSpaceX?
   
+  func goToYouTube(){
+    coordinator.goToYouTube()
+  }
+  func goToWebPage(){
+    coordinator.goToWebPage()
+  }
 }

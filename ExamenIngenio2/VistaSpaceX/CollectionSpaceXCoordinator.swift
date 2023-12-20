@@ -28,10 +28,12 @@ class CollectionSpaceXCoordinator : Coordinator{
   }
   
   func goToCarrusel(infoC : ModelSpaceX){
-    let coordinatorLogin = CarruselCoordinator(navigationController: navigationController)
-    coordinatorLogin.detalleInfo = infoC
-    childCoordinator.append(coordinatorLogin)
-    coordinatorLogin.startCoordinator()
+
+    let coordinatorCarrusel = CarruselCoordinator(navigationController: navigationController)
+    coordinatorCarrusel.detalleInfo = infoC
+    childCoordinator.append(coordinatorCarrusel)
+    coordinatorCarrusel.startCoordinator()
+
   }
   
   
