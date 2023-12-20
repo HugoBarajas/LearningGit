@@ -13,7 +13,7 @@ class CarruselCoordinator : Coordinator{
   var childCoordinator: [Coordinator] = []
   var navigationController : UINavigationController
   var detalleInfo: ModelSpaceX?
-  
+
   init(navigationController : UINavigationController){
     self.navigationController = navigationController
   }
@@ -34,6 +34,13 @@ class CarruselCoordinator : Coordinator{
     childCoordinator.append(coordinatorYouTube)
     coordinatorYouTube.startCoordinator()
   }
+    
+    func goToWebPage(detalleInfo : ModelSpaceX){
+      let coordinatorWeb = WebViewCoordinator(navigationController: navigationController)
+        coordinatorWeb.detalleInfo = detalleInfo
+      childCoordinator.append(coordinatorWeb)
+        coordinatorWeb.startCoordinator()
+    }
   
   
   

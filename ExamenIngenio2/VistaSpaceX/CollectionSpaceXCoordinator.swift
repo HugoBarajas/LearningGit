@@ -24,13 +24,12 @@ class CollectionSpaceXCoordinator : Coordinator{
     let viewModel = CollectionViewSpaceXViewModel()
     viewModel.coordinator = self
     view.viewModel = viewModel
-    navigationController.setViewControllers([view], animated: true)
+    navigationController.pushViewController(view, animated: true)
   }
   
   func goToCarrusel(infoC : ModelSpaceX){
     let coordinatorLogin = CarruselCoordinator(navigationController: navigationController)
     coordinatorLogin.detalleInfo = infoC
-    
     childCoordinator.append(coordinatorLogin)
     coordinatorLogin.startCoordinator()
   }

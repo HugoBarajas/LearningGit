@@ -184,11 +184,15 @@ class EspecificMissionsViewController: UIViewController {
    
   
   func initUI(){
+      
+      view.addSubview(botonRegresar)
+      botonRegresar.addAnchorsAndSize(width: 20, height: 20, left: 20, top: 60, right: nil, bottom: nil)
+      botonRegresar.addTarget(self, action: #selector(goBack), for: .touchUpInside)
     
     view.addSubview(detailsLabel)
     detailsLabel.addAnchorsAndCenter(centerX: true, centerY: false, width: width - 20, height: 40, left: nil, top: 90, right: nil, bottom: nil)
     
-    var fecha = formatearFecha(fechaString: (spaceXInfo?.launch_date_utc)!)
+      var fecha = formatearFecha(fechaString: (spaceXInfo?.launch_date_utc)!)
     
     dateLabel.text = ("Date: \(fecha)")
     view.addSubview(dateLabel)
@@ -272,6 +276,12 @@ class EspecificMissionsViewController: UIViewController {
         viewController.spaceXInfo =  info
         navigationController?.pushViewController(viewController, animated: true)
 //        viewController.spaceXInfo =  info
+    }
+    
+    @objc func goBack(){
+//        let viewController = CollectionSpaceXViewController()
+//        navigationController?.pushViewController(viewController, animated: true)
+        navigationController?.popViewController(animated: true)
     }
   
   func formatearFecha(fechaString : String) -> String {

@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class WebViewModel{
+  
+  var coordinator : WebViewCoordinator!
+  var detalleInfo : ModelSpaceX?
+ 
+  
+}

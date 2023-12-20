@@ -30,12 +30,12 @@ class YouTubeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      initInfo()
+//      initInfo()
       initUI()
     }
-  func initInfo(){
-    spaceXInfo = viewModel.detalleInfo
-  }
+//  func initInfo(){
+//    spaceXInfo = viewModel.detalleInfo
+//  }
   
     func initUI(){
         
